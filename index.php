@@ -1,6 +1,7 @@
 <?php
 
-declare(strict_types=1);
+// Only valid if PHP7 or greater
+//declare(strict_types=1);
 
 /**
  * AUTHOR : AVONTURE Christophe
@@ -9,6 +10,8 @@ declare(strict_types=1);
  *
  * Simple JSON_Encode ajax interface.
  */
+
+define('REPO', 'https://github.com/cavo789/json_encode');
 
 $task = filter_input(INPUT_POST, 'task', FILTER_SANITIZE_STRING);
 
@@ -31,6 +34,11 @@ $JSON = "this is a test\n".
     "(Sobre el Bé i el Mal) de Ciceró\n".
     "inntrykk av å være lesbar";
 
+// Get the GitHub corner
+$github = '';
+if (is_file($cat = __DIR__ . DIRECTORY_SEPARATOR . 'octocat.tmpl')) {
+    $github = str_replace('%REPO%', REPO, file_get_contents($cat));
+}
 ?>
 
 <!DOCTYPE html>
@@ -55,6 +63,7 @@ $JSON = "this is a test\n".
         </style>
     </head>
     <body>
+        <?php echo $github; ?>
         <div class="container">
             <div class="page-header"><h1>JSON Encode</h1></div>
             <div class="container">
