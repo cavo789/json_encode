@@ -4,7 +4,7 @@
 //declare(strict_types=1);
 
 /**
- * AUTHOR : AVONTURE Christophe
+ * AUTHOR : AVONTURE Christophe.
  *
  * Written date : 24 october 2018
  *
@@ -15,7 +15,7 @@ define('REPO', 'https://github.com/cavo789/json_encode');
 
 $task = filter_input(INPUT_POST, 'task', FILTER_SANITIZE_STRING);
 
-if ($task == 'encode') {
+if ('encode' == $task) {
     // Retrieve the JSON string
     $JSON = base64_decode(filter_input(INPUT_POST, 'json', FILTER_SANITIZE_STRING));
 
@@ -28,11 +28,11 @@ if ($task == 'encode') {
 }
 
 // Sample string; with accentuated characters and
-$JSON = "this is a test\n".
+$JSON = "this is a test\n" .
     "Paição São Paulo\n" .
-    "Nuit d'Été, ç'eût\n".
-    "(Sobre el Bé i el Mal) de Ciceró\n".
-    "inntrykk av å være lesbar";
+    "Nuit d'Été, ç'eût\n" .
+    "(Sobre el Bé i el Mal) de Ciceró\n" .
+    'inntrykk av å være lesbar';
 
 // Get the GitHub corner
 $github = '';
@@ -68,6 +68,22 @@ if (is_file($cat = __DIR__ . DIRECTORY_SEPARATOR . 'octocat.tmpl')) {
             <div class="page-header"><h1>JSON Encode</h1></div>
             <div class="container">
                 <div class="form-group">
+                    <details>
+                        <summary>How to use?</summary>
+
+                        <div class="row">
+                                <div class="col-sm">
+                                    <ul>
+                                        <li>Type (or paste) a text in the text area here below</li>
+                                        <li>Press the Encode button</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm">
+                                    <img height="300px" src="https://raw.githubusercontent.com/cavo789/json_encode/master/images/demo.gif" alt="Demo">
+                                </div>
+                            </div>
+                        </div>
+                    </details>
                     <label for="JSON">Copy/Paste your text in the 
                         textbox below then click on the Encode button:</label>
                     <textarea class="form-control" rows="5" id="JSON" name="JSON"><?php echo $JSON; ?></textarea>

@@ -18,4 +18,4 @@ Nuit d'\u00c9t\u00e9, \u00e7'e\u00fbt
 
 Just copy/paste your text into the text box as illustrated here below and click on the `Encode` button.
 
-![json_encode](images/json_encode.png)
+![json_encode](images/demo.gif)
