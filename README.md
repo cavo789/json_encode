@@ -1,3 +1,5 @@
+![Banner](images/banner.jpg)
+
 # JSON Encode
 
 Very straight-forward script for encoding string in JSON.
