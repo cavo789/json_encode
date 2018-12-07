@@ -70,7 +70,6 @@ if (is_file($cat = __DIR__ . DIRECTORY_SEPARATOR . 'octocat.tmpl')) {
                 <div class="form-group">
                     <details>
                         <summary>How to use?</summary>
-
                         <div class="row">
                                 <div class="col-sm">
                                     <ul>
@@ -79,7 +78,7 @@ if (is_file($cat = __DIR__ . DIRECTORY_SEPARATOR . 'octocat.tmpl')) {
                                     </ul>
                                 </div>
                                 <div class="col-sm">
-                                    <img height="300px" src="https://raw.githubusercontent.com/cavo789/json_encode/master/images/demo.gif" alt="Demo">
+                                    <img src="https://raw.githubusercontent.com/cavo789/json_encode/master/images/demo.gif" alt="Demo">
                                 </div>
                             </div>
                         </div>
@@ -118,7 +117,7 @@ if (is_file($cat = __DIR__ . DIRECTORY_SEPARATOR . 'octocat.tmpl')) {
                         $('#btnEncode').prop("disabled", false);
                         $('#Result').html(window.atob(data));
                     }
-                }); // $.ajax()
+                });
             });
         </script>
     </body>
