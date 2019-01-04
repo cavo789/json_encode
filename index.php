@@ -66,7 +66,12 @@ if (is_file($cat = __DIR__ . DIRECTORY_SEPARATOR . 'octocat.tmpl')) {
             <div class="page-header"><h1>JSON Encode</h1></div>
             <div class="container" id="app">
                 <div class="form-group">
-                    <how-to-use demo="https://raw.githubusercontent.com/cavo789/json_encode/master/images/demo.gif"></how-to-use>
+                    <how-to-use demo="https://raw.githubusercontent.com/cavo789/json_encode/master/images/demo.gif">
+                        <ul>
+                            <li>Type (or paste) a text in the text area here below</li>
+                            <li>Press the Encode button</li>
+                        </ul>
+                    </how-to-use>
                     <label for="JSON">Copy/Paste your text in the 
                         textbox below then click on the Encode button:</label>
                     <textarea class="form-control" rows="5" v-model="JSON" name="JSON"></textarea>
@@ -90,14 +95,10 @@ if (is_file($cat = __DIR__ . DIRECTORY_SEPARATOR . 'octocat.tmpl')) {
                     `<details>
                         <summary>How to use?</summary>
                         <div class="row">
-                                <div class="col-sm">
-                                    <ul>
-                                        <li>Type (or paste) a text in the text area here below</li>
-                                        <li>Press the Encode button</li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm"><img v-bind:src="demo" alt="Demo"></div>
+                            <div class="col-sm">
+                                <slot></slot>
                             </div>
+                            <div class="col-sm"><img v-bind:src="demo" alt="Demo"></div>                            
                         </div>
                     </details>`
             });
