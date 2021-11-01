@@ -1,6 +1,6 @@
-![Banner](images/banner.jpg)
-
 # JSON Encode
+
+![Banner](./banner.svg)
 
 Very straight-forward script for encoding string in JSON.
 
